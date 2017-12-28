@@ -3,3 +3,32 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+a:hover {
+ cursor:pointer;
+}
+
+.btn-about{
+  background-color:#ffd700 !important;
+  border-color:#ffd700 !important;
+  color:black !important;
+}
+.myName{
+  text-shadow: 2px 2px 4px #000000 !important;
+  color: white !important;
+}
+.myTitle{
+  text-shadow: 2px 2px 4px #000000 !important;
+}
+.bg-services{
+  background: #343a40 !important;
+}
+.portfolio-image{
+  max-width:200px;
+  margin-bottom:10px;
+}
+@media (min-width: 770px) {
+  .portfolio-image{
+    margin-right:60px;
+    float:left;
+  }
+}
