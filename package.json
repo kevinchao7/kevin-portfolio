@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "homepage": "https://kevinchao7.github.io/kevin-portfolio",
+  "homepage": "https://chaokevin.com/",
   "version": "0.1.0",
   "private": true,
   "license": "MIT",
@@ -29,11 +29,11 @@
     "react-scripts": "1.0.17"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "eject": "react-scripts eject"
   }
 }

@@ -24,13 +24,13 @@ class App extends Component {
 
   componentDidMount() {
 
-    Events.scrollEvent.register('begin', function() {
-      console.log("begin", arguments);
-    });
-
-    Events.scrollEvent.register('end', function() {
-      console.log("end", arguments);
-    });
+    // Events.scrollEvent.register('begin', function() {
+    //   console.log("begin", arguments);
+    // });
+    //
+    // Events.scrollEvent.register('end', function() {
+    //   console.log("end", arguments);
+    // });
 
   }
   scrollToTop() {
@@ -133,9 +133,9 @@ class App extends Component {
           <div className="overlay"></div>
         </header> */}
 
-        <Parallax strength={300}>
+        <Parallax strength={300} className='homepage'>
           <Background>
-            <img src="img/computer.jpg" style={{width:'1300px'}}/>
+            <img className='homeImg' src="img/computer.jpg"/>
           </Background>
           <header className="masthead d-flex" id='header'>
             <div className="container text-center my-auto">
@@ -154,9 +154,9 @@ class App extends Component {
           <div className="container text-center">
             <div className="row">
               <div className="col-lg-10 mx-auto">
-                <img className="img-fluid rounded portfolio-image" src="img/Kevin_13.jpg"></img>
-                <h2 style={{'text-align':'justify'}}>Engineer & Developer,</h2>
-                <p className="lead mb-5" style={{'text-align':'justify'}}>holds a bachelors of  science degree in Mechanical Engineering from California State University of Long Beach and a Full Stack Web Development Certificate from University of California, Irvine. He is an active mechanical engineer in the aerospace field. He also designs and builds full stack web applications from scratch with the latest technologies.</p>
+                <img className="img-fluid rounded portfolio-image" src="img/Kevin_13_small.jpg"></img>
+                <h2 className='aboutTitle'>Engineer & Developer,</h2>
+                <p className="lead mb-5" style={{'text-align':'justify'}}>Kevin holds a bachelors of  science degree in Mechanical Engineering from California State University, Long Beach and a Full Stack Web Development Certificate from University of California, Irvine. He is an active mechanical engineer in the aerospace field. He also designs and builds full stack web applications from scratch with the latest technologies. On his spare time, he enjoys traveling, basketball, and indoor rock climbing.</p>
                 <Link className="btn btn-dark btn-xl" style={{clear:'both'}} activeClass="active" to="services" spy={true} smooth={true} duration={750}>What Kevin Offers</Link>
               </div>
 
@@ -221,7 +221,7 @@ class App extends Component {
             <a className="btn btn-primary btn-xl" href="https://startbootstrap.com/template-overviews/stylish-portfolio/">Download Now!</a>
           </div>
         </section> */}
-        <Parallax strength={300}>
+        {/* <Parallax strength={300}>
           <Background>
             <img src="img/code.jpg" style={{width:'1300px'}}/>
           </Background>
@@ -233,7 +233,7 @@ class App extends Component {
               <a className="btn btn-primary btn-xl" href="https://startbootstrap.com/template-overviews/stylish-portfolio/">Download Now!</a>
             </div>
           </section>
-        </Parallax>
+        </Parallax> */}
 
         {/*<!-- Portfolio -->*/}
         <section className="content-section" id="portfolio">
@@ -244,47 +244,47 @@ class App extends Component {
             </div>
             <div className="row no-gutters">
               <div className="col-lg-6">
-                <a className="portfolio-item" href="#">
+                <a className="portfolio-item" target='_blank' href="https://uptobudget.herokuapp.com">
                   <span className="caption">
                     <span className="caption-content">
-                      <h2>Stationary</h2>
-                      <p className="mb-0">A yellow pencil with envelopes on a clean, blue backdrop!</p>
+                      <h2>Up to Budget</h2>
+                      <p className="mb-0">A financial budgeting web app that utilizes the 50% fixed cost, 20% financial goals, and 30% flexible spending principle. This app uses sequlize, express, node, react, google oauth, passportjs, and express sessions.</p>
                     </span>
                   </span>
-                  <img className="img-fluid" src="img/portfolio-1.jpg" alt=""></img>
+                  <img className="img-fluid" src="img/uptobudget.png" alt=""></img>
                 </a>
               </div>
               <div className="col-lg-6">
-                <a className="portfolio-item" href="#">
+                <a className="portfolio-item" target='_blank' href="https://kevinchao7.github.io/RPS-Multiplayer/">
                   <span className="caption">
                     <span className="caption-content">
-                      <h2>Ice Cream</h2>
-                      <p className="mb-0">A dark blue background with a colored pencil, a clip, and a tiny ice cream cone!</p>
+                      <h2>Rock Paper Scissor Multi-Player</h2>
+                      <p className="mb-0">A PVP rock paper scissor web application. This app uses materialize css and firebase.</p>
                     </span>
                   </span>
-                  <img className="img-fluid" src="img/portfolio-2.jpg" alt=""></img>
+                  <img className="img-fluid" src="img/rps.png" alt=""></img>
                 </a>
               </div>
               <div className="col-lg-6">
-                <a className="portfolio-item" href="#">
+                <a className="portfolio-item" target='_blank' href="https://kevinchao7.github.io/spaceinvader/">
                   <span className="caption">
                     <span className="caption-content">
-                      <h2>Strawberries</h2>
-                      <p className="mb-0">Strawberries are such a tasty snack, especially with a little sugar on top!</p>
+                      <h2>Space Invaders Web Game</h2>
+                      <p className="mb-0">Space Invaders made with vanilla javascript.</p>
                     </span>
                   </span>
-                  <img className="img-fluid" src="img/portfolio-3.jpg" alt=""></img>
+                  <img className="img-fluid" src="img/spaceinvader.png" alt=""></img>
                 </a>
               </div>
               <div className="col-lg-6">
-                <a className="portfolio-item" href="#">
+                <a className="portfolio-item" target='_blank' href="https://medaman.github.io/dancing-salmon">
                   <span className="caption">
                     <span className="caption-content">
-                      <h2>Workspace</h2>
-                      <p className="mb-0">A yellow workspace with some scissors, pencils, and other objects.</p>
+                      <h2>Dancing Salmon</h2>
+                      <p className="mb-0">A search music discography web application utilizing discogs API and google firebase!</p>
                     </span>
                   </span>
-                  <img className="img-fluid" src="img/portfolio-4.jpg" alt=""></img>
+                  <img className="img-fluid" src="img/dancing-salmon.png" alt=""></img>
                 </a>
               </div>
             </div>
@@ -292,26 +292,24 @@ class App extends Component {
         </section>
 
         {/* <!-- Call to Action --> */}
-        <section className="content-section bg-primary text-white">
+        {/* <section className="content-section bg-primary text-white">
           <div className="container text-center">
             <h2 className="mb-4">The buttons below are impossible to resist...</h2>
             <a href="#" className="btn btn-xl btn-light mr-4">Click Me!</a>
             <a href="#" className="btn btn-xl btn-dark">Look at Me!</a>
           </div>
-        </section>
+        </section> */}
 
         {/* <!-- Map --> */}
         <section id="contact" className="map">
-          <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
+          <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDLDqhu_Ed16sk-7OwNsDCipprgxoMvaY0&q= Downtown+Los Angeles,+CA"></iframe>
           <br/>
-          <small>
-            <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>
-          </small>
         </section>
 
         {/* <!-- Footer --> */}
         <footer className="footer text-center">
           <div className="container">
+            <h5>Connect with Kevin</h5><br></br>
             <ul className="list-inline mb-5">
               <li className="list-inline-item">
                 <a className="social-link rounded-circle text-white mr-3" target="_blank" href="https://www.linkedin.com/in/kevin-chao-eit-b98a5592/">
@@ -323,8 +321,13 @@ class App extends Component {
                   <i className="icon-social-github"></i>
                 </a>
               </li>
+              <li className="list-inline-item emailIcon">
+                <a className="social-link rounded-circle text-white" href="mailto:kevinchao562@yahoo.com?Subject=Hello%20Kevin!">
+                  <i className="icon-speech"></i>
+                </a>
+              </li>
             </ul>
-            <p className="text-muted small mb-0">Copyright &copy; Your Website 2017</p>
+            <p className="text-muted small mb-0">Copyright &copy; ChaoKevin.com 2017</p>
           </div>
         </footer>
 
