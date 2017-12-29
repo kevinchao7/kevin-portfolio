@@ -30,7 +30,9 @@ a:hover {
   margin-bottom:10px;
 }
 .homeImg{
+  /*opacity:0.75;*/
   max-width:2000px;
+  background-position:left;
 }
 .emailIcon{
   margin-left:15px !important;
@@ -47,8 +49,16 @@ a:hover {
 @media (max-width: 991px) {
   .homepage{
     padding-bottom: 14em;
+    background-position:left;
   }
   .homeImg{
+    /*opacity:0.75;*/
     max-width:1200px;
+  }
+}
+@media (max-width: 1300px) {
+  .homeImg{
+    /*opacity:0.75;*/
+    max-width:1400px;
   }
 }

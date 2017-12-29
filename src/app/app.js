@@ -135,7 +135,7 @@ class App extends Component {
 
         <Parallax strength={300} className='homepage'>
           <Background>
-            <img className='homeImg' src="img/computer.jpg"/>
+            <img className='homeImg' src="img/web-design.jpg"/>
           </Background>
           <header className="masthead d-flex" id='header'>
             <div className="container text-center my-auto">
